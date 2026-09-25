@@ -1,0 +1,26 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "${mod_license}"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+description = '''
+女仆委托系统 — 任务板、发布、接取、执行、交付框架。
+依赖 TLM 和 FennecLib。
+'''
+
+[[dependencies.${mod_id}]]
+modId = "touhou_little_maid"
+type = "required"
+versionRange = "[2.0.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "fenneclib"
+type = "required"
+versionRange = "[0.0.1,)"
+ordering = "NONE"
+side = "BOTH"
