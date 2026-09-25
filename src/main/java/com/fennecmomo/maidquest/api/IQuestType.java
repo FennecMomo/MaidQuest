@@ -65,9 +65,16 @@ public interface IQuestType
         return 0;
     }
 
+    // 兼容旧扩展；新的交付类型应覆盖带上限的版本。
+    @Deprecated
+    default int deposit(Quest quest, EntityMaid maid, Container target)
+    {
+        return 0;
+    }
+
     // 最多移入 maxAmount 个可交付物，返回实际移入数量。
     default int deposit(Quest quest, EntityMaid maid, Container target, int maxAmount)
     {
-        return 0;
+        return deposit(quest, maid, target);
     }
 }

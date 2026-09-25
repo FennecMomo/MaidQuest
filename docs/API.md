@@ -51,7 +51,7 @@ MapCodec<? extends Quest> codec();           // 公共字段复用 QuestCore.MAP
 Quest create(UUID id, String postedBy, int quantity, BlockPos boardPos, long gameTime);
 IQuestExecutor createExecutor(Quest quest, EntityMaid maid, ServerLevel level);
 int countCarried(Quest quest, EntityMaid maid);            // 交付型
-int deposit(Quest quest, EntityMaid maid, Container target); // 交付型
+int deposit(Quest quest, EntityMaid maid, Container target, int maxAmount); // 交付型，最多转移 maxAmount
 ```
 
 ### IQuestExecutor — 执行器接口
